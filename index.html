@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбор элементов</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .stats p {
+            font-size: 16px;
+            margin: 8px 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 110px);
+            gap: 10px;
+            justify-content: center;
+            margin-top: 25px;
+        }
+
+        .item {
+            width: 110px;
+            height: 110px;
+            background-color: #86d67e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: border 0.3s ease;
+            user-select: none;
+        }
+
+        .item.selected {
+            border: 3px solid #000000;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Выберите элементы</h1>
+        
+        <div class="stats">
+            <p>Элементов выбрано: <span id="selected-count">0</span></p>
+            <p>Сумма - <span id="total-sum">0</span></p>
+        </div>
+
+        <div class="grid" id="items-container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+            <div class="item">12</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
